@@ -6,13 +6,16 @@
     <title>D r a a x | D a m a r</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="image/X.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <style>
       body {
-        background: linear-gradient(-45deg, #ffffff, #def7ff, #e5e5e5, #ffffff);
+        background: linear-gradient(-45deg, #ffffff, #cef0fb, #b1e7f6, #ffffff);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
+        overscroll-behavior: none; /* opsional: mencegah bounce scroll */
+        overflow-x: hidden;
       }
       @keyframes gradientBG {
         0% {
@@ -30,6 +33,12 @@
       }
       .font-arial {
         font-family: Arial, sans-serif;
+      }
+      .font-orbitron {
+        font-family: "Orbitron", sans-serif;
+      }
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
       }
       html {
         scroll-behavior: smooth;
@@ -56,8 +65,8 @@
 
   <body class="text-black font-poppins">
     <!-- Header Mobile -->
-    <header class="md:hidden flex justify-between items-center p-4 bg-white shadow fixed top-0 left-0 w-full z-50">
-      <div class="text-xl font-bold">DRAAX</div>
+    <header class="md:hidden flex justify-between items-center p-4 bg-white shadow fixed top-0 left-0 w-full z-50" data-aos="fade-down">
+      <div class="text-xl font-orbitron font-bold">DRAAX</div>
       <button id="mobile-menu-button" class="text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
@@ -66,9 +75,9 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden flex-col bg-white text-black py-4 px-6 fixed top-16 left-0 w-full z-40 shadow-md space-y-4 md:hidden">
       <div class="flex flex-col space-y-4 text-center">
-        <a href="#about" class="hover:text-blue-600 font-arial">About</a>
-        <a href="#skills" class="hover:text-blue-600 font-arial">Skills</a>
-        <a href="#certificates" class="hover:text-blue-600 font-arial">Certificates</a>
+        <a href="#about" class="hover:text-blue-600 font-raleway">About</a>
+        <a href="#skills" class="hover:text-blue-600 font-raleway">Skills</a>
+        <a href="#certificates" class="hover:text-blue-600 font-raleway">Certificates</a>
       </div>
       <div class="pt-4 flex justify-center space-x-6 text-2xl">
         <a href="https://www.instagram.com/dmrrhmaaan17_/" target="_blank" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
@@ -78,14 +87,14 @@
     </div>
 
     <!-- Sidebar Desktop -->
-    <aside class="hidden md:flex w-48 h-screen fixed top-0 left-0 flex-col items-center py-6 pt-10 shadow-lg">
+    <aside class="hidden md:flex w-48 h-screen fixed top-0 left-0 flex-col items-center py-6 pt-10 shadow-lg" data-aos="fade-right">
       <a href="#">
         <img src="image/X.png" alt="Logo" class="w-16 h-16 mb-8" />
       </a>
       <nav class="flex flex-col space-y-8 text-center">
-        <a href="#about" class="text-sm font-arial hover:text-blue-600">About</a>
-        <a href="#skills" class="text-sm font-arial hover:text-blue-600">Skills</a>
-        <a href="#certificates" class="text-sm font-arial hover:text-blue-600">Certificate</a>
+        <a href="#about" class="text-sm font-raleway hover:text-blue-600">About</a>
+        <a href="#skills" class="text-sm font-raleway hover:text-blue-600">Skills</a>
+        <a href="#certificates" class="text-sm font-raleway hover:text-blue-600">Certificate</a>
       </nav>
       <div class="mt-auto mb-10 flex space-x-4 text-2xl">
         <a href="https://www.instagram.com/dmrrhmaaan17_/" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
@@ -97,10 +106,10 @@
     <!-- Main Content -->
     <main class="pt-16 md:pt-0 md:ml-48">
       <!-- Hero -->
-      <section class="h-screen flex flex-col justify-center items-center text-center space-y-4 relative">
-        <h2 class="text-5xl font-bold font-poppins text-black">D R A A X | D A M A R</h2>
-        <p class="text-2xl font-medium font-arial text-black">I'm <span id="typewriter" class="text-black"></span></p>
-        <p class="text-lg font-medium font-arial text-black bg-black rounded-full px-4 py-2 w-fit mx-auto text-white">Learn. Grow. Succeed.</p>
+      <section class="h-screen flex flex-col justify-center items-center text-center space-y-4 relative" data-aos="fade-up">
+        <h2 class="text-5xl font-bold font-orbitron text-black">D R A A X | D A M A R</h2>
+        <p class="text-2xl font-raleway text-black">I'm <span id="typewriter" class="text-black"></span></p>
+        <p class="text-lg font-medium font-poppins text-black bg-black rounded-full px-4 py-2 w-fit mx-auto text-white">Learn. Grow. Succeed.</p>
 
         <!-- Scroll Down Button -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
@@ -112,30 +121,40 @@
       </section>
 
       <!-- About -->
-      <section id="about" class="py-20 px-4 md:px-10">
+      <section id="about" class="py-20 px-4 md:px-10 font-poppins" data-aos="fade-right">
+        <!-- Judul -->
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-bold">About Me</h2>
-          <hr class="w-3/4 mx-auto border-t-2 border-black my-4" />
+          <h2 class="text-5xl font-bold font-poppins text-black font-orbitron">About Me</h2>
+          <hr class="border-t-2 border-black w-3/4 mx-auto mb-8" />
         </div>
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl mx-auto">
-          <div class="w-full md:w-1/2">
-            <img src="image/gw.jpg" alt="Profile" class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover mx-auto" />
+
+        <!-- Konten 2 kolom -->
+        <div class="flex flex-col md:flex-row items-center md:items-start max-w-5xl mx-auto space-y-10 md:space-y-0 md:space-x-10">
+          <!-- Gambar -->
+          <div class="flex-shrink-0 w-full md:w-[384px]">
+            <img src="image/gw.jpg" alt="Profile" class="w-96 h-96 object-cover rounded-full shadow-xl mx-auto md:mx-0" />
           </div>
-          <div class="w-full md:w-1/2 space-y-4 text-justify">
-            <h3 class="text-2xl font-bold">Hi, I'm Damar Rahman H.</h3>
-            <p class="text-gray-800 text-base">
-              I am a Software Engineering student at <a href="https://smkn2bekasi.sch.id/" target="_blank" class="underline">SMKN 2 Bekasi</a>
+
+          <!-- Teks & Sosmed -->
+          <div class="w-full max-w-3xl">
+            <h3 class="text-3xl font-bold mb-4 text-black">Hao, I'm Damar Rahman H.</h3>
+            <p class="text-gray-800 leading-relaxed text-base mb-6 text-black">
+              I am a Software Engineering student currently studying at
+              <a href="https://smkn2bekasi.sch.id/" class="text-black underline" target="_blank">SMKN 2 Bekasi</a>, with a passion for developing websites. With over 3 years of learning experience, I strive to bring innovative solutions and
+              create impactful results. <br /><br />
               I’m Damar, a passionate Software Engineering student at SMKN 2 Bekasi, with over 3 years of experience in web development. I’m driven by a deep curiosity to explore new technologies and a commitment to crafting impactful
               digital solutions. I had the opportunity to intern for 6 months at PT. Mesindo, where I worked as a Machine Programmer and Maintenance Technician. There, I gained practical experience in industrial machine programming and
               system maintenance, while also sharpening my software development skills. I’m focused on building scalable, reliable systems and always seeking ways to level up my technical expertise.
             </p>
+
+            <!-- Sosial Media -->
             <div>
-              <h4 class="text-lg font-semibold">Contact Me</h4>
+              <h4 class="text-xl font-semibold mb-2 text-black">Contact Me</h4>
               <div class="flex space-x-4 text-2xl text-black">
-                <a href="mailto:satoruadra@gmail.com" class="hover:text-blue-600"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/adra-satoru-7b61a736b/" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/AdraxSixma" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/dmrrhmaaan17_/" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=satoruadra@gmail.com" target="_blank" class="hover:text-[#1A73E8]"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/adra-satoru-7b61a736b/" target="_blank" class="hover:text-[#1A73E8]"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AdraxSixma" target="_blank" class="hover:text-[#1A73E8]"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/dmrrhmaaan17_/" target="_blank" class="hover:text-[#1A73E8]"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -143,78 +162,102 @@
       </section>
 
       <!-- Skills -->
-      <section id="skills" class="py-20 px-4 md:px-10">
+      <section id="skills" class="py-20 px-4 md:px-10 font-poppins" data-aos="fade-left">
         <div class="text-center mb-10">
-          <h2 class="text-4xl font-bold">Skills</h2>
-          <hr class="w-3/4 mx-auto border-t-2 border-black my-4" />
+          <h2 class="text-5xl font-bold font-orbitron text-black">Skills</h2>
+          <hr class="border-t-2 border-black w-3/4 mx-auto mb-8" />
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:pl-40">
+          <!-- Kiri Atas -->
           <div>
-            <h3 class="text-2xl font-bold mb-2">Programming Language</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-black text-white px-2 py-1 rounded">HTML</span>
-              <span class="bg-black text-white px-2 py-1 rounded">CSS</span>
-              <span class="bg-black text-white px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-black text-white px-2 py-1 rounded">PHP</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Python</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Dart</span>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 text-black font-orbitron">Programming Language</h3>
+            <ul class="list-disc list-inside">
+              <span class="bg-black text-black px-2 py-1 rounded text-white">HTML</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">CSS</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">JavaScript</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">PHP</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Python</span>
+            </ul>
           </div>
+
+          <!-- Kanan Atas -->
           <div>
-            <h3 class="text-2xl font-bold mb-2">Frameworks & Libraries</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-black text-white px-2 py-1 rounded">Bootstrap</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Tailwind CSS</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Angular</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Laravel</span>
-              <span class="bg-black text-white px-2 py-1 rounded">Flutter</span>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 text-black font-orbitron">Frameworks & Libraries</h3>
+            <ul class="list-disc list-inside">
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Bootstrap</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Tailwind CSS</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Vue.js</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">React</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Angular</span>
+            </ul>
           </div>
+
+          <!-- Kiri Bawah -->
           <div>
-            <h3 class="text-2xl font-bold mb-2">Tools</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-black text-white px-2 py-1 rounded">Git</span>
-              <span class="bg-black text-white px-2 py-1 rounded">VS Code</span>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 text-black font-orbitron">Tools</h3>
+            <ul class="list-disc list-inside">
+              <span class="bg-black text-black px-2 py-1 rounded text-white">Git</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">VS Code</span>
+            </ul>
           </div>
+
+          <!-- Kanan Bawah -->
           <div>
-            <h3 class="text-2xl font-bold mb-2">Database</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-black text-white px-2 py-1 rounded">MySQL</span>
-              <span class="bg-black text-white px-2 py-1 rounded">MongoDB</span>
-            </div>
+            <h3 class="text-3xl font-bold mb-4 font-orbitron">Database</h3>
+            <ul class="list-disc list-inside">
+              <span class="bg-black text-black px-2 py-1 rounded text-white">MySQL</span>
+              <span class="bg-black text-black px-2 py-1 rounded text-white">MongoDB</span>
+            </ul>
           </div>
         </div>
       </section>
 
       <!-- Certificates -->
-      <section id="certificates" class="py-16 px-4 md:px-10">
+      <section id="certificates" class="py-16 px-4 md:px-10 font-poppins" data-aos="fade-up">
         <div class="text-center mb-10">
-          <h2 class="text-4xl font-bold">Certificates</h2>
-          <hr class="w-3/4 mx-auto border-t-2 border-gray-600 my-4" />
+          <h2 class="text-4xl font-bold font-orbitron">Certificates</h2>
+          <hr class="border-t-2 border-gray-500 w-3/4 mx-auto mb-8" />
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <!-- Certificate cards -->
-          <div class="bg-gray-900 text-white rounded-lg overflow-hidden shadow hover:scale-105 transition">
-            <img src="image/IOT.png" alt="IOT Cert" class="w-full max-h-64 object-contain bg-white p-4" />
-            <div class="p-4">
-              <h3 class="text-xl font-bold">Samsung Innovation</h3>
-              <p class="text-sm text-gray-300">Digitalent Kominfo certificate from Samsung Innovation.</p>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Certificate 1 -->
+          <div class="bg-[#1a1a1a] rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:border-[#F7DC6F] border-4">
+            <div class="bg-white flex justify-center items-center p-4">
+              <img src="image/IOT.png" alt="TrasPac Intern Certificate" class="max-h-64 w-auto object-contain" />
+            </div>
+            <div class="p-4 text-white">
+              <h3 class="text-xl font-bold mb-1">Samsung Innovation</h3>
+              <p class="text-gray-300 text-sm">Certificate of participation in the Digitalent Kominfo competition organized by Samsung Innovation</p>
+              <div class="mt-3 text-lg text-gray-400">
+                <i class="fas fa-certificate"></i>
+              </div>
             </div>
           </div>
-          <div class="bg-gray-900 text-white rounded-lg overflow-hidden shadow hover:scale-105 transition">
-            <img src="image/Kominfo.png" alt="Kominfo Cert" class="w-full max-h-64 object-contain bg-white p-4" />
-            <div class="p-4">
-              <h3 class="text-xl font-bold">Kominfo Digitalent</h3>
-              <p class="text-sm text-gray-300">Certificate from Digitalent Kominfo competition.</p>
+
+          <!-- Certificate 2 -->
+          <div class="bg-[#1a1a1a] rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:border-[#F7DC6F] border-4">
+            <div class="bg-white flex justify-center items-center p-4">
+              <img src="image/Kominfo.png" alt="SMK Coding Certificate" class="max-h-64 w-auto object-contain" />
+            </div>
+            <div class="p-4 text-white">
+              <h3 class="text-xl font-bold mb-1">Kominfo Digitalent</h3>
+              <p class="text-gray-300 text-sm">Certificate of participation in the Digitalent Kominfo competition organized by Digitalent Kominfo.</p>
+              <div class="mt-3 text-lg text-gray-400">
+                <i class="fas fa-certificate"></i>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer class="text-center py-6 text-sm text-gray-600">&copy; 2025 draax. All rights reserved.</footer>
+      <footer class="text-center py-6 text-sm text-gray-600 font-raleway">&copy; 2025 draax. All rights reserved.</footer>
     </main>
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
