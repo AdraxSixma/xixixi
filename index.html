@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D r a a x | D a m a r</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="image/X.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      body {
+        background: linear-gradient(-45deg, #ffffff, #def7ff, #e5e5e5, #ffffff);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+      }
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .font-arial {
+        font-family: Arial, sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @keyframes scrollArrow {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(10px);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .scroll-indicator {
+        animation: scrollArrow 1.5s infinite;
+      }
+    </style>
+  </head>
+
+  <body class="text-black font-poppins">
+    <!-- Header Mobile -->
+    <header class="md:hidden flex justify-between items-center p-4 bg-white shadow fixed top-0 left-0 w-full z-50">
+      <div class="text-xl font-bold">DRAAX</div>
+      <button id="mobile-menu-button" class="text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-white text-black py-4 px-6 fixed top-16 left-0 w-full z-40 shadow-md space-y-4 md:hidden">
+      <div class="flex flex-col space-y-4 text-center">
+        <a href="#about" class="hover:text-blue-600 font-arial">About</a>
+        <a href="#skills" class="hover:text-blue-600 font-arial">Skills</a>
+        <a href="#certificates" class="hover:text-blue-600 font-arial">Certificates</a>
+      </div>
+      <div class="pt-4 flex justify-center space-x-6 text-2xl">
+        <a href="https://www.instagram.com/dmrrhmaaan17_/" target="_blank" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/AdraxSixma" target="_blank" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/adra-satoru-7b61a736b/" target="_blank" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Sidebar Desktop -->
+    <aside class="hidden md:flex w-48 h-screen fixed top-0 left-0 flex-col items-center py-6 pt-10 shadow-lg">
+      <a href="#">
+        <img src="image/X.png" alt="Logo" class="w-16 h-16 mb-8" />
+      </a>
+      <nav class="flex flex-col space-y-8 text-center">
+        <a href="#about" class="text-sm font-arial hover:text-blue-600">About</a>
+        <a href="#skills" class="text-sm font-arial hover:text-blue-600">Skills</a>
+        <a href="#certificates" class="text-sm font-arial hover:text-blue-600">Certificate</a>
+      </nav>
+      <div class="mt-auto mb-10 flex space-x-4 text-2xl">
+        <a href="https://www.instagram.com/dmrrhmaaan17_/" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/AdraxSixma" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/adra-satoru-7b61a736b/" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="pt-16 md:pt-0 md:ml-48">
+      <!-- Hero -->
+      <section class="h-screen flex flex-col justify-center items-center text-center space-y-4 relative">
+        <h2 class="text-5xl font-bold font-poppins text-black">D R A A X | D A M A R</h2>
+        <p class="text-2xl font-medium font-arial text-black">I'm <span id="typewriter" class="text-black"></span></p>
+        <p class="text-lg font-medium font-arial text-black bg-black rounded-full px-4 py-2 w-fit mx-auto text-white">Learn. Grow. Succeed.</p>
+
+        <!-- Scroll Down Button -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+          <a href="#about">
+            <p class="text-sm font-semibold tracking-widest text-black scroll-indicator">SCROLL DOWN</p>
+            <i class="fas fa-chevron-down text-xl mt-1 scroll-indicator text-black"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-20 px-4 md:px-10">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl md:text-5xl font-bold">About Me</h2>
+          <hr class="w-3/4 mx-auto border-t-2 border-black my-4" />
+        </div>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl mx-auto">
+          <div class="w-full md:w-1/2">
+            <img src="image/gw.jpg" alt="Profile" class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover mx-auto" />
+          </div>
+          <div class="w-full md:w-1/2 space-y-4 text-justify">
+            <h3 class="text-2xl font-bold">Hi, I'm Damar Rahman H.</h3>
+            <p class="text-gray-800 text-base">
+              I am a Software Engineering student at <a href="https://smkn2bekasi.sch.id/" target="_blank" class="underline">SMKN 2 Bekasi</a>
+              I’m Damar, a passionate Software Engineering student at SMKN 2 Bekasi, with over 3 years of experience in web development. I’m driven by a deep curiosity to explore new technologies and a commitment to crafting impactful
+              digital solutions. I had the opportunity to intern for 6 months at PT. Mesindo, where I worked as a Machine Programmer and Maintenance Technician. There, I gained practical experience in industrial machine programming and
+              system maintenance, while also sharpening my software development skills. I’m focused on building scalable, reliable systems and always seeking ways to level up my technical expertise.
+            </p>
+            <div>
+              <h4 class="text-lg font-semibold">Contact Me</h4>
+              <div class="flex space-x-4 text-2xl text-black">
+                <a href="mailto:satoruadra@gmail.com" class="hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/adra-satoru-7b61a736b/" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AdraxSixma" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/dmrrhmaaan17_/" class="hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="py-20 px-4 md:px-10">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold">Skills</h2>
+          <hr class="w-3/4 mx-auto border-t-2 border-black my-4" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Programming Language</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-black text-white px-2 py-1 rounded">HTML</span>
+              <span class="bg-black text-white px-2 py-1 rounded">CSS</span>
+              <span class="bg-black text-white px-2 py-1 rounded">JavaScript</span>
+              <span class="bg-black text-white px-2 py-1 rounded">PHP</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Python</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Dart</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Frameworks & Libraries</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-black text-white px-2 py-1 rounded">Bootstrap</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Tailwind CSS</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Angular</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Laravel</span>
+              <span class="bg-black text-white px-2 py-1 rounded">Laravel</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Tools</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-black text-white px-2 py-1 rounded">Git</span>
+              <span class="bg-black text-white px-2 py-1 rounded">VS Code</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Database</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-black text-white px-2 py-1 rounded">MySQL</span>
+              <span class="bg-black text-white px-2 py-1 rounded">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates -->
+      <section id="certificates" class="py-16 px-4 md:px-10">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold">Certificates</h2>
+          <hr class="w-3/4 mx-auto border-t-2 border-gray-600 my-4" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <!-- Certificate cards -->
+          <div class="bg-gray-900 text-white rounded-lg overflow-hidden shadow hover:scale-105 transition">
+            <img src="image/IOT.png" alt="IOT Cert" class="w-full max-h-64 object-contain bg-white p-4" />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">Samsung Innovation</h3>
+              <p class="text-sm text-gray-300">Digitalent Kominfo certificate from Samsung Innovation.</p>
+            </div>
+          </div>
+          <div class="bg-gray-900 text-white rounded-lg overflow-hidden shadow hover:scale-105 transition">
+            <img src="image/Kominfo.png" alt="Kominfo Cert" class="w-full max-h-64 object-contain bg-white p-4" />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">Kominfo Digitalent</h3>
+              <p class="text-sm text-gray-300">Certificate from Digitalent Kominfo competition.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-sm text-gray-600">&copy; 2025 draax. All rights reserved.</footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
